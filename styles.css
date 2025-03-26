@@ -1,0 +1,600 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variables de color */
+:root {
+    --teal-primary: #2A9D8F;
+    --teal-dark: #264653;
+    --teal-light: #E9F5F4;
+    --teal-accent: #40B3A2;
+    --teal-hover: #238477;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: var(--teal-dark);
+    background-color: var(--teal-light);
+}
+
+header {
+    background-color: var(--teal-dark);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 1rem 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: var(--teal-accent);
+}
+
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.noticias-principales {
+    margin-bottom: 3rem;
+}
+
+.noticia-destacada {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.formulario-contacto {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+button {
+    background-color: #2c3e50;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #3498db;
+}
+
+footer {
+    background-color: var(--teal-dark);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.confirmacion {
+    background-color: white;
+    padding: 3rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.confirmacion h2 {
+    color: #58afc5;
+    margin-bottom: 1rem;
+}
+
+.boton-volver {
+    display: inline-block;
+    background-color: #62afee;
+    color: white;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 2rem;
+    transition: background-color 0.3s;
+}
+
+.boton-volver:hover {
+    background-color: #5ca3d3;
+}
+
+.seccion-noticias {
+    margin: 3rem 0;
+}
+
+.seccion-noticias h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 2rem;
+}
+
+.grid-noticias {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.imagen-noticia {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 1rem;
+}
+
+.noticia {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.noticia:hover {
+    transform: translateY(-5px);
+}
+
+.noticia h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+}
+
+.noticia p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Ajuste para el scroll suave */
+html {
+    scroll-behavior: smooth;
+}
+
+.btn-agendar {
+    background-color: var(--teal-primary);
+    padding: 0.8rem 2rem;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(42, 157, 143, 0.3);
+}
+
+.btn-agendar:hover {
+    background-color: var(--teal-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(42, 157, 143, 0.4);
+}
+
+.btn-cta {
+    display: inline-block;
+    background-color: var(--teal-primary);
+    color: white;
+    padding: 1rem 3rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 2rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(42, 157, 143, 0.3);
+}
+
+.btn-cta:hover {
+    background-color: var(--teal-hover);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(42, 157, 143, 0.4);
+}
+
+.formulario-agendar {
+    background-color: var(--teal-light);
+    padding: 4rem 2rem;
+    margin: 2rem -1rem;
+}
+
+.formulario-agendar h2 {
+    color: var(--teal-primary);
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+}
+
+.form-container {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(42, 157, 143, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.btn-submit {
+    background-color: var(--teal-primary);
+    color: white;
+    padding: 1rem 2.5rem;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    width: 100%;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(42, 157, 143, 0.3);
+}
+
+.btn-submit:hover {
+    background-color: var(--teal-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(42, 157, 143, 0.4);
+}
+
+input[type="date"],
+input[type="time"] {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    background-color: white;
+}
+
+/* Estilos para la página de Kinesiología */
+.hero-section {
+    background: linear-gradient(rgba(38, 70, 83, 0.7), rgba(38, 70, 83, 0.7)), url('assets/Images/images.jpeg');
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    margin: -2rem -1rem 2rem -1rem;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 2rem;
+}
+
+.hero-content h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.seccion-consejos,
+.seccion-enfermedades {
+    background-color: white;
+    padding: 4rem 0;
+    margin: 2rem -1rem;
+}
+
+.seccion-consejos h2,
+.seccion-enfermedades h2 {
+    color: var(--teal-primary);
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.grid-consejos,
+.grid-enfermedades {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 0 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.consejo-card,
+.enfermedad-card {
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.consejo-card:hover,
+.enfermedad-card:hover {
+    transform: translateY(-10px);
+}
+
+.imagen-consejo,
+.imagen-enfermedad {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.consejo-card h3,
+.enfermedad-card h3 {
+    color: var(--teal-primary);
+    padding: 1.5rem 1.5rem 0.5rem;
+    font-size: 1.5rem;
+}
+
+.consejo-card p,
+.enfermedad-card p {
+    padding: 0 1.5rem 1.5rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+.contenido-resumen {
+    padding: 0 1.5rem 1.5rem;
+}
+
+.contenido-completo {
+    padding: 0 1.5rem 1.5rem;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.contenido-completo.visible {
+    display: block;
+    opacity: 1;
+}
+
+.contenido-completo ul {
+    margin-top: 1rem;
+    padding-left: 1.5rem;
+}
+
+.contenido-completo li {
+    margin-bottom: 0.5rem;
+    color: #666;
+}
+
+.btn-ver-mas {
+    background-color: var(--teal-primary);
+    color: white;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(42, 157, 143, 0.3);
+    margin: 0 1.5rem 1.5rem;
+    align-self: flex-start;
+}
+
+.btn-ver-mas:hover {
+    background-color: var(--teal-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(42, 157, 143, 0.4);
+}
+
+.btn-ver-mas.activo {
+    background-color: var(--teal-hover);
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+    
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+    
+    .btn-cta {
+        padding: 0.8rem 2rem;
+        font-size: 1rem;
+    }
+    
+    .grid-consejos,
+    .grid-enfermedades {
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
+    }
+    
+    .btn-ver-mas {
+        width: calc(100% - 3rem);
+        text-align: center;
+    }
+}
+
+.seccion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+    padding: 0 2rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.seccion-header h2 {
+    margin-bottom: 0;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.seccion-header h2:hover {
+    color: var(--teal-hover);
+}
+
+/* Ajustes responsivos para los encabezados de sección */
+@media (max-width: 768px) {
+    .seccion-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+        padding: 0 1rem;
+    }
+    
+    .btn-ver-mas {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.seccion-quienes-somos {
+    background-color: white;
+    padding: 4rem 0;
+    margin: 2rem -1rem;
+}
+
+.seccion-quienes-somos h2 {
+    color: var(--teal-primary);
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.quienes-somos-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.quienes-somos-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.quienes-somos-texto h3 {
+    color: var(--teal-primary);
+    font-size: 1.8rem;
+    margin: 2rem 0 1rem;
+}
+
+.quienes-somos-texto h3:first-child {
+    margin-top: 0;
+}
+
+.quienes-somos-texto p {
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.quienes-somos-texto ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.quienes-somos-texto li {
+    color: #666;
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.quienes-somos-texto li:before {
+    content: "•";
+    color: var(--teal-primary);
+    position: absolute;
+    left: 0;
+}
+
+.quienes-somos-imagen {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(42, 157, 143, 0.2);
+}
+
+.imagen-equipo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* Ajustes responsivos para la sección Quiénes Somos */
+@media (max-width: 768px) {
+    .quienes-somos-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .quienes-somos-imagen {
+        order: -1;
+        max-height: 300px;
+    }
+    
+    .quienes-somos-texto h3 {
+        font-size: 1.5rem;
+    }
+} 
